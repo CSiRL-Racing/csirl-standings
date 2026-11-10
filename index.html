@@ -359,6 +359,35 @@
       .form .fr.drop { opacity: 0.5; }
       @media (max-width: 639px) {
         table.standings-table .opt { display: none; }
+        .table-scroll { overflow-x: hidden; }
+        table.standings-table { table-layout: fixed; font-size: 0.85rem; }
+        table.standings-table thead tr { font-size: 0.65rem; letter-spacing: 0.02em; }
+        table.standings-table th,
+        table.standings-table td { padding-left: 0.18rem; padding-right: 0.18rem; }
+        table.standings-table th:first-child,
+        table.standings-table td:first-child { padding-left: 0.45rem; }
+        table.standings-table th:last-child,
+        table.standings-table td:last-child { padding-right: 0.45rem; }
+        table.standings-table th { white-space: normal; }
+        table.standings-table td.driver { white-space: normal; overflow-wrap: break-word; }
+        table.standings-table th:first-child { width: 2.1rem; }
+        table.standings-table th.num { width: 2.05rem; }
+        table.standings-table th:last-child { width: 2.2rem; }
+        #gr86 table.standings-table th:nth-child(9) { width: 2.55rem; }
+        table.standings-table th.num.hc { width: 3.05rem; font-size: 0.62rem; }
+        .pool-grid { grid-template-columns: minmax(0, 1fr); }
+        .pool-card { min-width: 0; }
+      }
+      @media (max-width: 359px) {
+        table.standings-table thead tr { font-size: 0.6rem; }
+        table.standings-table th:first-child { width: 1.95rem; }
+        table.standings-table th.num { width: 1.95rem; }
+        table.standings-table th:last-child { width: 2.05rem; }
+        table.standings-table th.hc { font-size: 0.6rem; }
+        #gr86 table.standings-table th:nth-child(6) { width: 1.85rem; }
+        #gr86 table.standings-table th:nth-child(7) { width: 1.6rem; }
+        #gr86 table.standings-table th:nth-child(8) { width: 1.85rem; }
+        #gr86 table.standings-table th:last-child { width: 1.95rem; }
       }
       .table-note {
         padding: 0.65rem 1rem;
@@ -853,8 +882,8 @@
                   <tr>
                     <th scope="col">Pos</th>
                     <th scope="col">Driver</th>
-                    <th scope="col" class="num">Rds</th>
-                    <th scope="col" class="num">Wins</th>
+                    <th scope="col" class="num opt">Rds</th>
+                    <th scope="col" class="num opt">Wins</th>
                     <th scope="col" class="num opt">Pod</th>
                     <th scope="col" class="num">Pole</th>
                     <th scope="col" class="num">FL</th>
@@ -867,8 +896,8 @@
                   <tr class="p1">
                     <td class="pos">1</td>
                     <td class="driver">Alex Leonard</td>
-                    <td class="num">7</td>
-                    <td class="num">0</td>
+                    <td class="num opt">7</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">7</td>
                     <td class="num">0</td>
                     <td class="num">1</td>
@@ -879,8 +908,8 @@
                   <tr>
                     <td class="pos">2</td>
                     <td class="driver">Dave Sciarretta</td>
-                    <td class="num">7</td>
-                    <td class="num">2</td>
+                    <td class="num opt">7</td>
+                    <td class="num opt">2</td>
                     <td class="num opt">4</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -891,8 +920,8 @@
                   <tr>
                     <td class="pos">3</td>
                     <td class="driver">Nicholas Shelow</td>
-                    <td class="num">6</td>
-                    <td class="num">2</td>
+                    <td class="num opt">6</td>
+                    <td class="num opt">2</td>
                     <td class="num opt">5</td>
                     <td class="num">2</td>
                     <td class="num">1</td>
@@ -903,8 +932,8 @@
                   <tr>
                     <td class="pos">4</td>
                     <td class="driver">Jan Masztal</td>
-                    <td class="num">5</td>
-                    <td class="num">3</td>
+                    <td class="num opt">5</td>
+                    <td class="num opt">3</td>
                     <td class="num opt">3</td>
                     <td class="num">4</td>
                     <td class="num">3</td>
@@ -915,8 +944,8 @@
                   <tr>
                     <td class="pos">5</td>
                     <td class="driver">Michael Fagone</td>
-                    <td class="num">7</td>
-                    <td class="num">0</td>
+                    <td class="num opt">7</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -927,8 +956,8 @@
                   <tr>
                     <td class="pos">6</td>
                     <td class="driver">Derick Mullis</td>
-                    <td class="num">6</td>
-                    <td class="num">0</td>
+                    <td class="num opt">6</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">1</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -939,8 +968,8 @@
                   <tr>
                     <td class="pos">7</td>
                     <td class="driver">Kevin Annis</td>
-                    <td class="num">6</td>
-                    <td class="num">0</td>
+                    <td class="num opt">6</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -951,8 +980,8 @@
                   <tr>
                     <td class="pos">8</td>
                     <td class="driver">Andrew Guzman2</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">1</td>
                     <td class="num">0</td>
                     <td class="num">1</td>
@@ -963,8 +992,8 @@
                   <tr>
                     <td class="pos">9</td>
                     <td class="driver">Clifford Beckham</td>
-                    <td class="num">2</td>
-                    <td class="num">0</td>
+                    <td class="num opt">2</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">1</td>
                     <td class="num">1</td>
@@ -975,8 +1004,8 @@
                   <tr>
                     <td class="pos">10</td>
                     <td class="driver">Andrew Lasher</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -987,8 +1016,8 @@
                   <tr>
                     <td class="pos">11</td>
                     <td class="driver">Chris Teed</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -999,8 +1028,8 @@
                   <tr>
                     <td class="pos">12</td>
                     <td class="driver">Michael Charette</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -1011,8 +1040,8 @@
                   <tr>
                     <td class="pos">13</td>
                     <td class="driver">Thomas Beyersdorf</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -1023,8 +1052,8 @@
                   <tr>
                     <td class="pos">14</td>
                     <td class="driver">Nicole Murillo</td>
-                    <td class="num">1</td>
-                    <td class="num">0</td>
+                    <td class="num opt">1</td>
+                    <td class="num opt">0</td>
                     <td class="num opt">0</td>
                     <td class="num">0</td>
                     <td class="num">0</td>
@@ -1312,14 +1341,14 @@
                   <tr>
                     <th scope="col">Pos</th>
                     <th scope="col">Driver</th>
-                    <th scope="col" class="num">Rds</th>
-                    <th scope="col" class="num">Wins</th>
+                    <th scope="col" class="num opt">Rds</th>
+                    <th scope="col" class="num opt">Wins</th>
                     <th scope="col" class="num opt">Pod</th>
                     <th scope="col" class="num">Pole</th>
                     <th scope="col" class="num">FL</th>
                     <th scope="col" class="num">CRB</th>
                     <th scope="col" class="num">Sweep</th>
-                    <th scope="col" class="num">Hard Charger</th>
+                    <th scope="col" class="num hc">Hard Charger</th>
                     <th scope="col" class="num">Pts</th>
                   </tr>
                 </thead>
